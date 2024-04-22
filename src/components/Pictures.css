@@ -1,0 +1,36 @@
+.pictures {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 32px;
+  columns: 4 120px;
+  gap:  8px;
+}
+
+.picture {
+  position: relative;
+  flex: 1 0 auto; /* Makes image containers flexible */
+  align-items: stretch;
+  margin-bottom: 8px;
+}
+
+.image {
+  border-radius: 8px;
+  max-width: 100%;
+  object-fit: cover;
+  height: auto;
+  display: block;
+}
+
+.icon {
+  display: none;
+  width: 30px;
+  position: absolute;
+  top: 10px; /* Ajusta esta posición según tu diseño */
+  right: 10px; /* Ajusta esta posición según tu diseño */
+  z-index: 1; /* Asegura que el icono esté por encima de la imagen */
+}
+
+.picture .icon {
+  display: block;
+}
