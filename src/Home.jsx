@@ -2,23 +2,26 @@ import "./Home.css";
 //import results from "./mocks/results.json";
 import { Pictures } from "./components/Pictures.jsx";
 import { Footer } from "./components/Footer.jsx";
-import { FavoriteProvider } from "./contexts/favorite.jsx";
 import { usePictures } from "./hooks/usePictures.js";
 import { useSearch } from "./hooks/useSearch.js";
 import debounce from "just-debounce-it";
 import { useCallback } from "react";
+import { LinkFavorites } from "./components/LinkFavorites.jsx";
+import { Loader } from "./components/Loader.jsx";
 
-function Home() {
+
+export function Home() {
   //const pictures = results.results
 
   const { search } = useSearch();
-  const { getPictures, pictures } = usePictures({ search });
+  const { getPictures, pictures, loading } = usePictures({ search });
 
   const debouncedPictures = useCallback(
     debounce((search) => {
       getPictures({ search });
     }, 700)
   );
+
 
   // Header
   function Header() {
@@ -55,11 +58,13 @@ function Home() {
   }
 
   return (
-    <FavoriteProvider>
+    <>
+      <LinkFavorites />
       <Header />
+      {loading && <Loader/>}
       <Pictures pictures={pictures} />
       <Footer />
-    </FavoriteProvider>
+    </>
   );
 }
 

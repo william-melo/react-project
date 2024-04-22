@@ -1,6 +1,12 @@
 #root {
-    width: 100% !important;
     margin: 0 auto;
     padding: 2rem;
     box-sizing: border-box;
+    width: 90%;
+    
   }
+
+.container {
+  display: flex;
+
+}
