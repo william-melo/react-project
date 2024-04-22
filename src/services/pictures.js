@@ -1,6 +1,4 @@
 export const searchPictures = async ({ search }) => {
-  //const API_KEY = import.meta.env.API_KEY;
-  //const API_URL = import.meta.env.API_URL;
 
   if (search === "") return null; //if there is no input, we don't make an api call
 

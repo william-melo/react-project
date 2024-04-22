@@ -39,7 +39,7 @@ export function Home() {
 
     return (
       <header>
-        <h1>React Pictures</h1>
+        <h1>FotoFusion Gallery</h1>
         <form onSubmit={handleSubmit}>
           <div className="search-container">
             <input
