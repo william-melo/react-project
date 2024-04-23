@@ -63,6 +63,7 @@
   padding: 10px; /* Agrega un poco de espacio para que no se superponga con el contenido */
   color: white; /* Asegura que el texto sea visible en cualquier fondo */
   transition: opacity 0.3s ease-in-out;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
 
 .picture-container:hover .icon {
