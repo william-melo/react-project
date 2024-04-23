@@ -3,7 +3,7 @@
   padding: 0;
   margin: 0;
   margin-top: 32px;
-  columns: 4 120px;
+  columns: 3 120px;
   gap: 8px;
 }
 
@@ -27,11 +27,12 @@
   width: 30px;
   position: absolute;
   top: 10px; /* Ajusta esta posición según tu diseño */
-  right: 10px; /* Ajusta esta posición según tu diseño */
+  right: 15px; /* Ajusta esta posición según tu diseño */
   z-index: 1; /* Asegura que el icono esté por encima de la imagen */
   cursor: pointer;
+  transition: display 0.5s ease-in-out;
 }
 
-.picture .icon {
+.picture:hover .icon {
   display: block;
 }
