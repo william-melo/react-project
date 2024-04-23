@@ -11,11 +11,10 @@
   position: relative;
   flex: 1 0 auto; /* Makes image containers flexible */
   align-items: stretch;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .image {
-  border-radius: 8px;
   max-width: 100%;
   object-fit: cover;
   height: auto;

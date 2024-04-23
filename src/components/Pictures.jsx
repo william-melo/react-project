@@ -17,7 +17,7 @@ export function Pictures({ pictures }) {
       {pictures?.map((picture) => {
         const isFavoritePicture = checkFavoritePicture(picture);
         return (
-          <li key={picture.id} className="picture">
+          <li key={picture.id} className="picture-container">
             <div>
               <img
                 draggable= "false"

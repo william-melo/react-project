@@ -7,19 +7,39 @@
   gap: 8px;
 }
 
-.picture {
-  position: relative;
+.picture-container {
   flex: 1 0 auto; /* Makes image containers flexible */
   align-items: stretch;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .image {
-  border-radius: 8px;
+  
   max-width: 100%;
   object-fit: cover;
   height: auto;
   display: block;
+}
+
+.picture-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.picture-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+  opacity: 0; 
+  transition: opacity 0.3s ease; 
+}
+
+.picture-container:hover::before {
+  opacity: 1; /* Muestra la capa de difuminado al pasar el mouse */
 }
 
 .icon {
@@ -30,9 +50,9 @@
   right: 15px; /* Ajusta esta posición según tu diseño */
   z-index: 1; /* Asegura que el icono esté por encima de la imagen */
   cursor: pointer;
-  transition: display 0.5s ease-in-out;
+  transition: opacity 0.3s ease-in-out; /* Cambio de opacidad para una transición suave */
 }
 
-.picture:hover .icon {
+.picture-container:hover .icon {
   display: block;
 }
