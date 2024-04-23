@@ -9,7 +9,7 @@ export function FavoritesPage() {
   return (
     <>
     <div>
-        <NavLink to="/home">
+        <NavLink to="/">
             <button>Volver</button>
         </NavLink>
     </div>
