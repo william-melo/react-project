@@ -53,6 +53,22 @@
   transition: opacity 0.3s ease-in-out; /* Cambio de opacidad para una transición suave */
 }
 
+.author-name {
+  display: none;
+  font-size: 18px;
+  position: absolute;
+  bottom: 0; /* Se coloca en la esquina inferior */
+  left: 0; /* Se coloca en la esquina izquierda */
+  z-index: 1;
+  padding: 10px; /* Agrega un poco de espacio para que no se superponga con el contenido */
+  color: white; /* Asegura que el texto sea visible en cualquier fondo */
+  transition: opacity 0.3s ease-in-out;
+}
+
 .picture-container:hover .icon {
+  display: block;
+}
+
+.picture-container:hover .author-name {
   display: block;
 }

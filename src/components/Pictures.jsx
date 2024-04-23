@@ -40,6 +40,8 @@ export function Pictures({ pictures }) {
                     : addToFavorites(picture);
                 }}
               />
+
+              <p className="author-name">📷 {picture.user.name}</p>
             </div>
           </li>
         );

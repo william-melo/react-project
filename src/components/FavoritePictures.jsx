@@ -1,24 +1,24 @@
 import { LikedHeartIcon, NoLikeHeartIcon } from "./Icons";
 import { useFavorite } from "../hooks/useFavorite";
-import "./FavoritePictures.css"
+import "./FavoritePictures.css";
 
-export function FavoritePictures ({pictures}) {
-    const { favoritePictures, addToFavorites, removeFromFavorites } =
+export function FavoritePictures({ pictures }) {
+  const { favoritePictures, addToFavorites, removeFromFavorites } =
     useFavorite();
 
-    const checkFavoritePicture = (picture) => {
-        return favoritePictures.some((item) => item.id === picture.id);
-      };
+  const checkFavoritePicture = (picture) => {
+    return favoritePictures.some((item) => item.id === picture.id);
+  };
 
-    return (
-        <ul className="pictures">
+  return (
+    <ul className="pictures">
       {pictures?.map((picture) => {
         const isFavoritePicture = checkFavoritePicture(picture);
         return (
           <li key={picture.id} className="picture-container">
             <div>
               <img
-                draggable= "false"
+                draggable="false"
                 className="image"
                 src={picture.urls.small}
                 alt={`Photo by ${picture.user.name}`}
@@ -38,10 +38,12 @@ export function FavoritePictures ({pictures}) {
                     : addToFavorites(picture);
                 }}
               />
+
+              <p className="author-name">📷 {picture.user.name}</p>
             </div>
           </li>
         );
       })}
     </ul>
-    )
+  );
 }

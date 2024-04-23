@@ -9,7 +9,7 @@ export const searchPictures = async ({ search }) => {
       }&query=${search}&page=1&per_page=30`
     );
     const json = await response.json();
-
+    
     const responsePictures = json.results;
     return responsePictures;
   } catch (error) {

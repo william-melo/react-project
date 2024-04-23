@@ -15,7 +15,6 @@ export function Home() {
 
   const { search } = useSearch();
   const { getPictures, pictures, loading } = usePictures({ search });
-
   const debouncedPictures = useCallback(
     debounce((search) => {
       getPictures({ search });
